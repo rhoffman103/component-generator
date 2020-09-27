@@ -1,0 +1,22 @@
+import React{{> destructured items=hooks}} from "react";
+import ProptTypes form "prop-types";
+
+const {{ title }} = (props) => {
+  {{#ifIn "useState" hooks}}
+  const [state, setState] = useState();
+
+  {{/ifIn}}
+  {{#ifIn "useEffect" hooks}}
+  useEffect(() => {
+
+  }, []);
+
+  {{/ifIn}}
+  return (
+    <div>{{ title }} Component!</div>
+  );
+};
+
+{{ title }}.propTypes = {};
+
+export default {{ title }};
