@@ -18,6 +18,6 @@ for (const file of partialNames) {
   handlebars.registerPartial(file.replace(".handlebars", ""), template);
 }
 
-export const outputPath = path.join(__dirname, "..", "..", "client");
+export const outputPath = path.join(__dirname, "..", "..", "output");
 
 export default handlebars;
