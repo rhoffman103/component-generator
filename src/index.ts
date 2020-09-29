@@ -1,9 +1,17 @@
+import yargs from "yargs";
 import generateComponent from './generator';
-import { Hook, Template, ComponentType } from './types/index';
+import { Hook, Template, Category } from './types/index';
+
+enum Arg {
+  NAME = 'name',
+  HOOKS = 'hooks',
+  TYPE = 'type',
+  CAT = 'category'
+};
 
 generateComponent({
   title: "GeneratedComponent",
   hooks: [Hook.US, Hook.UE],
   template: Template.FC,
-  type: ComponentType.V
+  category: Category.C
 });
